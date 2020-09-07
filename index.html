@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #cvs {
+        border: 1px solid #FFF;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="cvs"></canvas>
+  </body>
+  <script type="module">
+    import { Visualizer } from "./Visualizer.js";
+    window.onload = function () {
+      const visualizer = new Visualizer(
+        window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth,
+        window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight
+      );
+    };
+  </script>
+</html>
