@@ -20,10 +20,11 @@ export class Data {
 
   init() {
     this.radians = 0;
+    const diag = Math.sqrt(this.canvas.width * this.canvas.width + this.canvas.height * this.canvas.height);
     for (let i = 0; i < this.particles.length; i++) {
       this.particles[i] = new Particle(
-        (Math.random() - 0.5) * this.canvas.width * 1.414,
-        (Math.random() - 0.5) * this.canvas.height * 1.414,
+        (Math.random() - 0.5) * diag,
+        (Math.random() - 0.5) * diag,
         Math.random() * 2 + 1,
         this.colors[Math.floor(Math.random() * this.colors.length)]
       );
